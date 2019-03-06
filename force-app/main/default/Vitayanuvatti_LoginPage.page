@@ -1,0 +1,35 @@
+<apex:page sidebar="false" controller ="LoginPageController" showHeader="false" standardStylesheets="false">
+<apex:form>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Southern Heart Health Insurance Login</title>
+    </head>
+
+    <body>
+        <div id="container">
+            <form>
+                <label for="username">Username:</label>
+                <apex:inputtext value="{!username}"/>
+                <br/>
+                <label for="password">Password:</label>
+                <apex:inputtext value="{!password}"/>
+                <br/>
+                <div id="lower">
+                    <apex:commandButton value="Login" action="{!loggingIn}"/>
+                </div>
+            </form>
+        </div>
+    </body>
+</apex:form>
+
+
+<style>
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Garamond", sans-serif;
+    color: #444;
+}
+
+</style>
+</apex:page>
