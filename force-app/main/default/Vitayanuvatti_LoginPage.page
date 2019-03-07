@@ -1,7 +1,8 @@
-<apex:page sidebar="false" controller ="LoginPageController" showHeader="false" standardStylesheets="false">
+<apex:page sidebar="false" controller ="LoginPageController" showHeader="false" standardStylesheets="true">
 <apex:form>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <apex:stylesheet value="{!URLFOR($Resource.CSS,'Login.css')}"/>
         <title>Southern Heart Health Insurance Login</title>
     </head>
 
@@ -20,6 +21,7 @@
                 <br/>
                 <div id="lower">
                     <apex:commandButton value="Login" action="{!loggingIn}"/>
+                    <apex:commandButton value="Forgot Password" action="{!forgotPass}"/>
                 </div> <!-- End lower-->
             </form>
         </div><!-- End container-->
@@ -32,30 +34,6 @@
 
 
 <style>
-html, body{
-    width: 100%;
-    height: 100%;
-    font-family: "Garamond", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background:#ff4d4d;
-}
-
-
-
-label{
-    margin-left: 25px;
-    font-size: 20px;
-    display: inline-block;
-}
-
-input[type=text]{
-    justify-content: center;
-    font-size: 14px;
-    font-family: sans-serif;
-    margin-left: 25px;
-    width: 200px;
-    height:15px;
-}
 
 input[type=submit]{
     float: left;
@@ -63,7 +41,6 @@ input[type=submit]{
     height: 25px;
     cursor: pointer;
 }
-
 #lower{
     background: #ecf2f5;
     width: 100%;

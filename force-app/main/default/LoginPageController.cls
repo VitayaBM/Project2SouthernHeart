@@ -8,4 +8,9 @@ public class LoginPageController {
     {
         return Site.login(username, password, 'https://southernheart-dev-ed.lightning.force.com/lightning/page/home');
     }
+
+    public void forgotPass()
+    {
+        
+    }
 }
