@@ -6,10 +6,12 @@
     </head>
 
     <body>
-        <apex:pageBlock>
-            <apex:pageBlockSection>
-                <div id="container">
-                    <form>
+        
+            
+        <div id="container">
+            <form>
+                <apex:pageBlock>
+                    <apex:pageBlockSection columns="1">
                         <label for="username">Username:</label>
                         <br/>
                         <apex:inputtext value="{!username}"/>
@@ -18,13 +20,14 @@
                         <br/>
                         <apex:inputtext value="{!password}"/>
                         <br/>
+                    
                         <div id="lower">
                             <apex:commandButton value="Login" action="{!loggingIn}"/>
-                        </div>
-                    </form>
-                </div>
-            </apex:pageBlockSection>
-        </apex:pageBlock>
+                        </div> 
+                    </apex:pageBlockSection>                           
+            </apex:pageBlock>
+            </form>
+        </div>
     </body>
 </apex:form>
 
@@ -46,7 +49,7 @@ label{
     display: inline-block;
 }
 
-input{
+input[type=text]{
     justify-content: center;
     font-size: 14px;
     font-family: sans-serif;
@@ -55,10 +58,20 @@ input{
     height:15px;
 }
 
+#lower{
+    background: #ecf2f5;
+    margin-top: 20px;
+    width: 100%;
+    height:25px;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
 #container{
     width: 250px;
     height: 250px;
-    
+    position: fixed;
     top:0;
     bottom:0;
     left:0;
@@ -68,6 +81,8 @@ input{
     border: 4px double;
     border-color: #e6e600;
 }
+
+
 
 </style>
 </apex:page>
