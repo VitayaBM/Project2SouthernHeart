@@ -7,27 +7,26 @@
 
     <body>
         
-            
+        <div id="outer_box">    
         <div id="container">
             <form>
-                <apex:pageBlock>
-                    <apex:pageBlockSection columns="1">
-                        <label for="username">Username:</label>
-                        <br/>
-                        <apex:inputtext value="{!username}"/>
-                        <br/>
-                        <label for="password">Password:</label>
-                        <br/>
-                        <apex:inputtext value="{!password}"/>
-                        <br/>
-                    
-                        <div id="lower">
-                            <apex:commandButton value="Login" action="{!loggingIn}"/>
-                        </div> 
-                    </apex:pageBlockSection>                           
-            </apex:pageBlock>
+                <label for="username">Username:</label>
+                <br/>
+                <apex:inputtext value="{!username}"/>
+                <br/>
+                <label for="password">Password:</label>
+                <br/>
+                <apex:inputtext value="{!password}"/>
+                <br/>
+                <div id="lower">
+                    <apex:commandButton value="Login" action="{!loggingIn}"/>
+                </div> <!-- End lower-->
             </form>
-        </div>
+        </div><!-- End container-->
+        </div><!-- End outer_box-->
+        <div class="HospitalPhoto">
+                <apex:image value="{!$Resource.Hospital}"/>
+        </div><!-- End HospitalPhoto-->
     </body>
 </apex:form>
 
@@ -58,11 +57,18 @@ input[type=text]{
     height:15px;
 }
 
+input[type=submit]{
+    float: left;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+}
+
 #lower{
     background: #ecf2f5;
-    margin-top: 20px;
     width: 100%;
-    height:25px;
+    height: 40px;
+    margin-top: 20px;
     border-top: 1px solid #ccc;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -75,13 +81,32 @@ input[type=text]{
     top:0;
     bottom:0;
     left:0;
-    right:0;
+    right:50%;
     margin:auto;
     background: #fff;
     border: 4px double;
     border-color: #e6e600;
 }
 
+.HospitalPhoto{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:50%;
+    right:0;
+    margin: auto;
+    border: 3px solid;
+    border-color: #e6e600;
+    overflow: hidden;
+    
+}
+
+.HospitalPhoto image{
+    max-width:100%;
+    max-height:100%;
+    object-fit: cover;
+    object-position:bottom;
+}
 
 
 </style>
