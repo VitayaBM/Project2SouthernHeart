@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        <apex:pageMessages id="UserMsg"></apex:pageMessages>
         <div id="loginWrap">
             <div id="logo">
                 <apex:image value="{!$Resource.Heart_Small}" width="100%" height="100%"/>
@@ -49,7 +50,7 @@ h1{
     font-size: 32px;
     font-family: "Garamond", sans-serif;
     position: fixed;
-    top:25%;
+    top:40%;
     bottom:0;
     left:0;
     right:50%;
@@ -83,7 +84,7 @@ input[type=submit]{
     height:25%;
     position: fixed;
     top:0;
-    bottom:75%;
+    bottom:50%;
     left:0;
     right:50%;
     margin:auto;
@@ -101,7 +102,7 @@ input[type=submit]{
     width: 20%;
     height: 30%;
     position: fixed;
-    top:5%;
+    top:30%;
     bottom: 0;
     left:0;
     right: 50%;
@@ -109,13 +110,14 @@ input[type=submit]{
     background: #ff9999;
     border: 6px double;
     border-color: #e6e600;
+    text-align: center;
 }
 
 #container{
     width: 18%;
     height: 26%;
     position: fixed;
-    top:5%;
+    top:30%;
     bottom:0;
     left:0;
     right:50%;
@@ -123,6 +125,7 @@ input[type=submit]{
     background: #fff;
     border: 4px dotted;
     border-color: #e6e600;
+    display: inline;
 }
 #container input[type=text]{
     width:75%;

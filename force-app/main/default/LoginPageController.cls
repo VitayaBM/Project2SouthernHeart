@@ -20,8 +20,9 @@ public class LoginPageController {
         }
         else 
         {
-           return null;
+           ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR, 'User not found. Please double-check the Username to make sure it is valid.'));
         }
+        return null;
     }
 
 }
